@@ -60,17 +60,26 @@
 .task-row-wrap {
 	display: flex;
 }
-#incomplete-tasks, #completed-tasks {
+#incomplete-tasks,
+#completed-tasks {
 	margin:0;
 	padding: 0px;
 }
-.task-item, .action {
+.task-item, 
+.action {
 	list-style: none;
 }
-#new-task, .checkbox, .task, .add, .edit, .delete{
+#new-task, 
+.checkbox, 
+.task, 
+.add, 
+.edit, 
+.delete{
 	outline: none;
 }
-.add, .edit, .delete {
+.add, 
+.edit, 
+.delete {
 	background: none;
 	border: 0px;
 	color: #888;
@@ -79,7 +88,9 @@
 	font-family: Lato, sans-serif;
 	cursor: pointer;
 }
-.add:hover, .edit:hover, .delete:hover {
+.add:hover, 
+.edit:hover, 
+.delete:hover {
 	color: #3a3A3a;
 }
 /* Heading */
@@ -107,7 +118,8 @@
 }
 
 /* Task list */
-.task-item, .edit-mode {
+.task-item, 
+.edit-mode {
 	overflow: hidden;
 	padding: 20px 0;
 	border-bottom: 1px solid #eee;
@@ -115,14 +127,21 @@
 	justify-content: space-between;
 	align-items: center;
 }
-.task-item > *, .edit-mode > * {
+.task-item > *, 
+.edit-mode > * {
 	vertical-align: middle;
 }
 
-.task-item > .checkbox, .edit-mode > .checkbox {
+.task-item > .checkbox,
+.edit-mode > .checkbox {
 	margin: 0 10px;
 }
-.task-item > .new-task, .edit-mode > .new-task, .task-item > .task, .edit-mode > .task, .task-item > .made-task, .edit-mode > .made-task {
+.task-item > .new-task, 
+.edit-mode > .new-task, 
+.task-item > .task, 
+.edit-mode > .task, 
+.task-item > .made-task, 
+.edit-mode > .made-task {
 	padding-left: 10px;
 	box-sizing: border-box;
 	font-size: 18px;
@@ -139,7 +158,8 @@
 	color: #888;
 	flex-grow: 1;
 }
-.task-item > .task, .edit-mode > .task {
+.task-item > .task, 
+.edit-mode > .task {
 	width: 226px;
 }
 .delete .remove {
@@ -152,21 +172,25 @@
 }
 
 /* Completed */
-#completed-tasks .made-task, #incompleted-tasks .made-task {
+#completed-tasks .made-task,
+#incompleted-tasks .made-task {
 	text-decoration: line-through;
 	color: #888;
 }
 
 /* Edit Task */
-#completed-tasks .task-item .task, #incomplete-tasks .task-item .task{
+#completed-tasks .task-item .task, 
+#incomplete-tasks .task-item .task{
 	display: none;
 }
 
-#completed-tasks .edit-mode .task, #incomplete-tasks .edit-mode .task {
+#completed-tasks .edit-mode .task, 
+#incomplete-tasks .edit-mode .task {
 	display: inline-block;
 	width: 224px;
 }
 
-#completed-tasks .edit-mode .labl, #incomplete-tasks .edit-mode .labl {
-	display: none;
+#completed-tasks .edit-mode .labl, 
+#incomplete-tasks .edit-mode .labl {
+	display: none
 }
