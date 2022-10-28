@@ -65,10 +65,10 @@
 	padding: 0px;
 }
 .task-item, .action {
-	list-style:none;
+	list-style: none;
 }
 #new-task, .checkbox, .task, .add, .edit, .delete{
-	outline:none;
+	outline: none;
 }
 .add, .edit, .delete {
 	background: none;
@@ -103,7 +103,7 @@
 	margin: 0 0 20px;
 }
 #new-task {
-    width: 318px;
+	width: 318px;
 }
 
 /* Task list */
@@ -140,7 +140,7 @@
 	flex-grow: 1;
 }
 .task-item > .task, .edit-mode > .task {
-	width: 226px
+	width: 226px;
 }
 .delete .remove {
 	height: 2em;
@@ -159,14 +159,14 @@
 
 /* Edit Task */
 #completed-tasks .task-item .task, #incomplete-tasks .task-item .task{
-	display:none
+	display: none;
 }
 
 #completed-tasks .edit-mode .task, #incomplete-tasks .edit-mode .task {
-	display:inline-block;
-	width:224px
+	display: inline-block;
+	width: 224px;
 }
 
 #completed-tasks .edit-mode .labl, #incomplete-tasks .edit-mode .labl {
-	display:none;
+	display: none;
 }
