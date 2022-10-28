@@ -1,0 +1,1 @@
+It is a task from Rsschool stage 1
