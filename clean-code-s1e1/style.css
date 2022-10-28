@@ -192,5 +192,5 @@
 
 #completed-tasks .edit-mode .labl, 
 #incomplete-tasks .edit-mode .labl {
-	display: none
+	display: none;
 }
