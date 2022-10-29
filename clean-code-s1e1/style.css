@@ -30,7 +30,9 @@
 	width: 500px;
 	margin: 0 auto 0;
 }
-.task {
+.adding-element__task, 
+.incomplete-tasks__task-item__task,
+.completed-tasks__task-item__task {
 	width: 56%;
 	display: inline-block;
 	flex-grow: 1;
@@ -45,7 +47,7 @@
 	font-family: Lato, sans-serif;
 	color: #888;
 }
-.labl {
+.incomplete-tasks__task-item__labl {
 	width: 56%;
 	display: inline-block;
 	flex-grow: 1;
@@ -57,7 +59,7 @@
 	border-radius: 6px;
 	font-family: Lato, sans-serif;
 }
-.task-row-wrap {
+.adding-element__task-row-wrap {
 	display: flex;
 }
 #incomplete-tasks,
@@ -65,21 +67,29 @@
 	margin:0;
 	padding: 0px;
 }
-.task-item, 
+.incomplete-tasks__task-item,
+.completed-tasks__task-item,
 .action {
 	list-style: none;
 }
 #new-task, 
-.checkbox, 
-.task, 
-.add, 
-.edit, 
-.delete{
+.incomplete-tasks__task-item__checkbox, 
+.completed-tasks__task-item__checkbox,
+.adding-element__task, 
+.incomplete-tasks__task-item__task,
+.completed-tasks__task-item__task, 
+.adding-element__task-row-wrap__add-button, 
+.completed-tasks__task-item__edit, 
+.incomplete-tasks__task-item__edit,
+.incomplete-tasks__task-item__delete,
+.completed-tasks__task-item__delete {
 	outline: none;
 }
-.add, 
-.edit, 
-.delete {
+.adding-element__task-row-wrap__add-button, 
+.completed-tasks__task-item__edit, 
+.incomplete-tasks__task-item__edit, 
+.incomplete-tasks__task-item__delete,
+.completed-tasks__task-item__delete {
 	background: none;
 	border: 0px;
 	color: #888;
@@ -88,14 +98,16 @@
 	font-family: Lato, sans-serif;
 	cursor: pointer;
 }
-.add:hover, 
-.edit:hover, 
-.delete:hover {
+.adding-element__task-row-wrap__add-button:hover, 
+.completed-tasks__task-item__edit:hover, 
+.incomplete-tasks__task-item__edit:hover, 
+.incomplete-tasks__task-item__delete:hover,
+.completed-tasks__task-item__delete:hover {
 	color: #3a3A3a;
 }
 /* Heading */
 .action,
-.new-task {
+.adding-element__new-task {
 	color: #333;
 	font-weight: 700;
 	font-size: 15px;
@@ -104,7 +116,9 @@
 	margin: 0;
 	text-transform: uppercase;
 }
-.task:focus {
+.adding-element__task:focus, 
+.incomplete-tasks__task-item__task:focus,
+.completed-tasks__task-item__task:focus {
 	color: #333;
 }
 
@@ -118,7 +132,8 @@
 }
 
 /* Task list */
-.task-item, 
+.incomplete-tasks__task-item,
+.completed-tasks__task-item, 
 .edit-mode {
 	overflow: hidden;
 	padding: 20px 0;
@@ -127,20 +142,27 @@
 	justify-content: space-between;
 	align-items: center;
 }
-.task-item > *, 
+.incomplete-tasks__task-item > *,
+.completed-tasks__task-item > *, 
 .edit-mode > * {
 	vertical-align: middle;
 }
 
-.task-item > .checkbox,
-.edit-mode > .checkbox {
+.incomplete-tasks__task-item > .incomplete-tasks__task-item__checkbox, 
+.incomplete-tasks__task-item > .completed-tasks__task-item__checkbox,
+.completed-tasks__task-item > .incomplete-tasks__task-item__checkbox, 
+.completed-tasks__task-item > .completed-tasks__task-item__checkbox,
+.edit-mode > .incomplete-tasks__task-item__checkbox,
+.edit-mode > .completed-tasks__task-item__checkbox {
 	margin: 0 10px;
 }
-.task-item > .new-task, 
+.incomplete-tasks__task-item > .new-task,
+.completed-tasks__task-item > .new-task, 
 .edit-mode > .new-task, 
-.task-item > .task, 
-.edit-mode > .task, 
-.task-item > .made-task, 
+.incomplete-tasks__task-item > .incomplete-tasks__task-item__task,
+.completed-tasks__task-item > .completed-tasks__task-item__task, 
+.completed-tasks__task-item > .made-task,
+.incomplete-tasks__task-item > .made-task,  
 .edit-mode > .made-task {
 	padding-left: 10px;
 	box-sizing: border-box;
@@ -158,39 +180,41 @@
 	color: #888;
 	flex-grow: 1;
 }
-.task-item > .task, 
-.edit-mode > .task {
+.incomplete-tasks__task-item > .incomplete-tasks__task-item__task,
+.completed-tasks__task-item > .completed-tasks__task-item__task, 
+.edit-mode > .incomplete-tasks__task-item__task,
+.edit-mode > .completed-tasks__task-item__task
+{
 	width: 226px;
 }
-.delete .remove {
+.incomplete-tasks__task-item__delete .remove,
+.completed-tasks__task-item__delete .remove {
 	height: 2em;
 	transform: rotateZ(45deg);
 	transition: transform 200ms ease-in;
 }
-.delete .remove:hover {
+.remove:hover {
 	transform: rotateZ(0);
 }
-
 /* Completed */
 #completed-tasks .made-task,
-#incompleted-tasks .made-task {
+#incomplete-tasks .made-task {
 	text-decoration: line-through;
 	color: #888;
 }
 
 /* Edit Task */
-#completed-tasks .task-item .task, 
-#incomplete-tasks .task-item .task{
+.incomplete-tasks__task-item .incomplete-tasks__task-item__task, 
+.completed-tasks__task-item .completed-tasks__task-item__task {
 	display: none;
 }
 
-#completed-tasks .edit-mode .task, 
-#incomplete-tasks .edit-mode .task {
+#completed-tasks .edit-mode .completed-tasks__task-item__task, 
+#incomplete-tasks .edit-mode .incomplete-tasks__task-item__task {
 	display: inline-block;
 	width: 224px;
 }
 
-#completed-tasks .edit-mode .labl, 
-#incomplete-tasks .edit-mode .labl {
+#incomplete-tasks .edit-mode .incomplete-tasks__task-item__labl {
 	display: none;
 }
