@@ -1,1 +1,2 @@
-It is a task from Rsschool stage 1
+# It is a final project from Rs school stage1
+### This is a project to practice clean and readable code skills
